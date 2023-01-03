@@ -5,7 +5,7 @@ and variables, and indexing and slicing strings in Python.
 
 ## Tests :heavy_check_mark:
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+* [tests](./tests): Folder of test files. Provided by ALX SE.
 
 ## Function Prototypes :floppy_disk:
 
