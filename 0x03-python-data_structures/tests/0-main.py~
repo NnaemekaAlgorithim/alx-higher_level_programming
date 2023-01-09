@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+from pathlib import Path
+print_list_integer = Path("0x03-python-data_structures/0-print_list_integer.py")
+
+my_list = [1, 2, 3, 4, 5]
+print_list_integer(my_list)
