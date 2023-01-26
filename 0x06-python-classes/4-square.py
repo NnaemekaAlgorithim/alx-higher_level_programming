@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # 4-square.py
-
 """Define a class Square."""
+
 
 class Square:
     """Represent a square."""
