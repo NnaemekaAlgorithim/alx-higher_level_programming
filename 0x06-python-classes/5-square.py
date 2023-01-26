@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # 5-square.py
-
 """Define a class square."""
+
 
 class Square:
     """Represent a square."""
@@ -12,7 +12,7 @@ class Square:
             size (int): the size of the new aquare.
         """
         self.size = size
-        
+
     @property
     def size(self):
         """Get/set the current size of the square."""
