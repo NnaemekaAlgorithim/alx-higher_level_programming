@@ -15,7 +15,9 @@ if __name__ == '__main__':
         host='localhost')
 
     cursor = data_base.cursor()
-    cursor.execute('SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id;')
+    cursor.execute('SELECT cities.id,\
+        cities.name, states.name FROM cities JOIN states\
+        ON cities.state_id = states.id;')
 
     states = cursor.fetchall()
 
