@@ -14,12 +14,10 @@ if __name__ == '__main__':
         port=3306,
         host='localhost')
 
-    cursor = data_base.cursor()
-    cursor.execute('SELECT cities.id,\
-        cities.name, states.name FROM cities JOIN states\
-        ON cities.state_id = states.id;')
-
-    states = cursor.fetchall()
-
-    for state in states:
-        print(state)
+    c = data_base.cursor()
+    c.execute("SELECT `c`.`id`, `c`.`name`, `s`.`name` \
+                 FROM `cities` as `c` \
+                INNER JOIN `states` as `s` \
+                   ON `c`.`state_id` = `s`.`id` \
+                ORDER BY `c`.`id`")
+    [print(city) for city in c.fetchall()]
