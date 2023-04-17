@@ -6,6 +6,7 @@ Usage: ./14-model_city_fetch_by_state.py <mysql username> /
                                           <database name>
 """
 
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
