@@ -7,19 +7,27 @@ def find_peak(list_of_integers):
     Arg:
         a list containing integers.
     """
-    loi = list_of_integers
-    if loi == []:
+    def find_peak(list_of_integers):
+    """Finds the peak in an unsorted list of ints"""
+    if len(list_of_integers) > 1:
+        if list_of_integers[0] >= list_of_integers[1]:
+            return list_of_integers[0]
+        if list_of_integers[-1] >= list_of_integers[-2]:
+            return list_of_integers[-1]
+        return _find_peak(list_of_integers, 0, len(list_of_integers))
+    if not list_of_integers:
         return None
-    total = len(loi)
-    if total == 1:
-        return loi[0]
-    elif total == 2:
-        return max(loi)
-    middle = int(total / 2)
-    peak = loi[middle]
-    if peak > loi[middle - 1] and peak > loi[middle + 1]:
-        return peak
-    elif peak < loi[middle - 1]:
-        return find_peak(loi[:middle])
-    else:
-        return find_peak(loi[middle + 1:])
+    return list_of_integers[0]
+
+
+def _find_peak(lint, start, stop):
+    """Recursively finds peak
+    Arg:
+        lint start and stop.
+    """
+    if stop - start < 2:
+        return None
+    mid = (start + stop) // 2
+    if lint[mid] >= lint[mid - 1] and lint[mid] >= lint[mid + 1]:
+        return lint[mid]
+    return _find_peak(lint, start, mid) or _find_peak(lint, mid, stop
