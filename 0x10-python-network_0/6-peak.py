@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 """searches for the peak in an unsorted list of integers"""
 
+
 def find_peak(list_of_integers):
-    """Return a peak in a list of unsorted integers."""
+    """Return a peak in a list of unsorted integers.
+    Arg:
+        a list containing integers.
+    """
     loi = list_of_integers
     if loi == []:
         return None
