@@ -24,6 +24,7 @@ def _find_peak(lint, start, stop):
     Arg:
         lint, start, stop.
     """
+
     if stop - start < 2:
         return None
     mid = (start + stop) // 2
