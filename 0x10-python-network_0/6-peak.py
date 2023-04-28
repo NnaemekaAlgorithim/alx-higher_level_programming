@@ -7,8 +7,7 @@ def find_peak(list_of_integers):
     Arg:
         a list containing integers.
     """
-    def find_peak(list_of_integers):
-    """Finds the peak in an unsorted list of ints"""
+    
     if len(list_of_integers) > 1:
         if list_of_integers[0] >= list_of_integers[1]:
             return list_of_integers[0]
@@ -23,11 +22,11 @@ def find_peak(list_of_integers):
 def _find_peak(lint, start, stop):
     """Recursively finds peak
     Arg:
-        lint start and stop.
+        lint, start, stop.
     """
     if stop - start < 2:
         return None
     mid = (start + stop) // 2
     if lint[mid] >= lint[mid - 1] and lint[mid] >= lint[mid + 1]:
         return lint[mid]
-    return _find_peak(lint, start, mid) or _find_peak(lint, mid, stop
+    return _find_peak(lint, start, mid) or _find_peak(lint, mid, stop)
